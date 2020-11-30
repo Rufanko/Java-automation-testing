@@ -1,17 +1,13 @@
 import localhost.Settings;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 
-
 public class loginTest extends Settings {
-    
+
 
 
 
@@ -38,27 +34,25 @@ public class loginTest extends Settings {
 
 
         for (int i = 0; i < numberOfListElements; i++) {
-
             elementList = driver.findElements(By.cssSelector("#app-"));
+            Thread.sleep(500);
             elementList.get(i).click();
-            Thread.sleep(200);
+            assertTrue(areElementsPresent(By.cssSelector("#content > h1")));
             List<WebElement> elementList2 = driver.findElements((By.cssSelector("#app- li")));
-
             int numberOfUl = elementList2.size();
-            System.out.println(numberOfUl);
-
             for (int k = 0; k < numberOfUl; k++) {
                 elementList2 = driver.findElements((By.cssSelector("#app- li")));
-
                 elementList2.get(k).click();
+                assertTrue(isElementPresent(By.cssSelector("#content > h1")));
                 Thread.sleep(200);
-
 
             }
 
         }
 
     }
+
+
 
 
 }
