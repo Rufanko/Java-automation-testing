@@ -4,6 +4,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+
+
 public class Settings {
     public ChromeDriver driver;
 
