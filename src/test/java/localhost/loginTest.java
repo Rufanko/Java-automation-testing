@@ -14,7 +14,7 @@ public class loginTest extends Settings {
 
     @Test
     public void TestLogin() throws InterruptedException {
-        setUp();
+        setUp();    
         driver.get("http://localhost/litecart/admin/login.php?redirect_url=%2Flitecart%2Fadmin%2F");
         WebElement usernameInput = driver.findElement(By.name("username"));
         usernameInput.sendKeys("admin");
