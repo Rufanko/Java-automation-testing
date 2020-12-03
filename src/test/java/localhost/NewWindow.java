@@ -84,12 +84,5 @@ public class NewWindow extends Settings {
         }
     }
 
-    private void implicitlyWaitOn() {
-        driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
-    }
-
-    private void implicitlyWaitOff() {
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    }
 
 }
