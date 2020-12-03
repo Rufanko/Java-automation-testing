@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -13,13 +14,16 @@ public class Settings {
     public ChromeDriver driver;
 
 
+
+
+
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/Maven/chromedriver.exe");
         //driver = new FirefoxDriver();
         //driver = new InternetExplorerDriver();
         driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
@@ -36,6 +40,8 @@ public class Settings {
         return driver.findElements(locator).size() > 0;
 
     }
+
+
 }
 
 
